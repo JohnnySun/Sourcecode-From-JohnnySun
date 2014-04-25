@@ -1,0 +1,8 @@
+struct widget * init_widget()
+{
+    struct widget * widget = (struct widget *)malloc(sizeof(struct widget)); 
+    memset(widget, 0, sizeof(struct widget);
+
+    return widget;
+}
+

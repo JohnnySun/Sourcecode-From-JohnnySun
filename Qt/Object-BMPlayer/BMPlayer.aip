@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT type="Advanced Installer" CreateVersion="6.6" version="6.6" modules="enterprise" RootPath="." Language="en">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPCONTACT" Value="BMY-Soft"/>
+    <ROW Property="ARPHELPLINK" Value="bmysoft.sourceforge.net"/>
+    <ROW Property="ARPPRODUCTICON" Value="controlPanelIcon.exe"/>
+    <ROW Property="ARPURLINFOABOUT" Value="bmplayer.sourceforge.net"/>
+    <ROW Property="ARPURLUPDATEINFO" Value="bmplayer.sourceforge.net"/>
+    <ROW Property="BannerBitmap" Value="style28_banner.jpg" Type="1"/>
+    <ROW Property="CTRLS" Value="3"/>
+    <ROW Property="DialogBitmap" Value="style28_dialog.jpg" Type="1"/>
+    <ROW Property="Manufacturer" Value="BMY-Soft" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="1033:{A2A83712-5C64-439B-907C-671D0C97DC79} 1049:{9D799FCB-A67C-4508-BC98-FF7093A594CC} 3082:{1D45CCF4-B8A9-44CF-9E37-8E680990F68D} 1028:{F76BCEC3-50C4-4341-B248-4982BF26A1BD} 1036:{65747A29-79A7-44C5-9CC6-5FDF4791B65E} 2052:{9DBE93B0-26DD-4F1F-86C0-83C93395413F} 1031:{D1177105-E848-482D-8613-89862A454F81} "/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="BMPlayer" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="1.0.2"/>
+    <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{331BF7EA-B0FE-4E57-85E4-871E51C1B7C7}"/>
+    <ROW Property="VIEWREADME" Value="1" Type="4"/>
+    <ROW Property="WindowsTypeNT64" MultiBuildValue="DefaultBuild:Windows Vista x64" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="Deskto~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="codecs_DIR" Directory_Parent="mplayer_DIR" DefaultDir="codecs"/>
+    <ROW Directory="conf.avail_DIR" Directory_Parent="fonts_DIR" DefaultDir="conf~1.ava|conf.avail"/>
+    <ROW Directory="conf.d_DIR" Directory_Parent="fonts_DIR" DefaultDir="conf.d"/>
+    <ROW Directory="docs_DIR" Directory_Parent="mplayer_DIR" DefaultDir="docs"/>
+    <ROW Directory="fonts_DIR" Directory_Parent="mplayer_DIR" DefaultDir="fonts"/>
+    <ROW Directory="mplayer_1_DIR" Directory_Parent="mplayer_DIR" DefaultDir="mplayer"/>
+    <ROW Directory="mplayer_DIR" Directory_Parent="APPDIR" DefaultDir="mplayer"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_ExePath" ComponentId="{5251B473-04FA-4EFD-BB90-E8935902E81B}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="BMplayer.exe" ComponentId="{2D37A5FA-6F93-43E9-B44E-D6573167E71F}" Directory_="APPDIR" Attributes="0" KeyPath="BMplayer.exe"/>
+    <ROW Component="COPYING_dsnative.txt" ComponentId="{05B9A25F-C265-4FED-A058-1D12360A05FF}" Directory_="mplayer_DIR" Attributes="0" KeyPath="COPYING_dsnative.txt" Type="0"/>
+    <ROW Component="ChangeLog.txt" ComponentId="{708F3F83-CF02-4198-91F1-5946A65268D6}" Directory_="APPDIR" Attributes="0" KeyPath="ChangeLog.txt" Type="0"/>
+    <ROW Component="CtWbJpg.DLL" ComponentId="{F4223194-1EA1-4E82-926E-21CA81705AF6}" Directory_="codecs_DIR" Attributes="0" KeyPath="CtWbJpg.DLL"/>
+    <ROW Component="LCODCCMW2E.dll" ComponentId="{BB529D0B-6036-48D1-B465-6805DB8A48C3}" Directory_="codecs_DIR" Attributes="0" KeyPath="LCODCCMW2E.dll"/>
+    <ROW Component="QtCore4.dll" ComponentId="{E01C36A3-BA6D-4B69-8307-C3FFA941EE4A}" Directory_="APPDIR" Attributes="0" KeyPath="QtCore4.dll"/>
+    <ROW Component="QtGui4.dll" ComponentId="{10E1215E-69BC-49FA-8D67-6B16B0039DAC}" Directory_="APPDIR" Attributes="0" KeyPath="QtGui4.dll"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{8D584DE6-F8D2-4A0A-98D3-2DDE06A77D73}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="ViVD2.dll" ComponentId="{A5CD77D3-FCA6-48AE-A368-98B0B55ACC09}" Directory_="codecs_DIR" Attributes="0" KeyPath="ViVD2.dll"/>
+    <ROW Component="aalib.html" ComponentId="{54F600D7-4660-4698-8F90-B6099E3DD1FD}" Directory_="docs_DIR" Attributes="0" KeyPath="aalib.html" Type="0"/>
+    <ROW Component="acelpdec.ax" ComponentId="{E22FD41E-E22E-4DB4-BA4D-58445BE760FA}" Directory_="codecs_DIR" Attributes="0" KeyPath="acelpdec.ax" Type="0"/>
+    <ROW Component="aslcodec_dshow.dll" ComponentId="{E123A7EC-EA1A-4D79-AAF9-854C32FE31DC}" Directory_="codecs_DIR" Attributes="0" KeyPath="aslcodec_dshow.dll"/>
+    <ROW Component="autohint.conf" ComponentId="{3FC99EE4-21FF-4B7B-980C-8696C041B787}" Directory_="conf.avail_DIR" Attributes="0" KeyPath="autohint.conf" Type="0"/>
+    <ROW Component="clrviddc.dll" ComponentId="{ADD2C5D6-B317-4416-90E0-162B7170D270}" Directory_="codecs_DIR" Attributes="0" KeyPath="clrviddc.dll"/>
+    <ROW Component="clrviddd.dll" ComponentId="{821F69FC-BB20-48D8-9C1E-374E353CA264}" Directory_="codecs_DIR" Attributes="0" KeyPath="clrviddd.dll"/>
+    <ROW Component="codecs.conf" ComponentId="{56738FA8-130B-4083-ADC7-511947EBAAA1}" Directory_="mplayer_1_DIR" Attributes="0" KeyPath="codecs.conf" Type="0"/>
+    <ROW Component="cook.dll" ComponentId="{5D861B07-C0F8-45C4-AF6A-ACBAF1EFFE40}" Directory_="codecs_DIR" Attributes="0" KeyPath="cook.dll"/>
+    <ROW Component="decvw_32.dll" ComponentId="{EAE352C6-A345-4387-B093-24EE501B912C}" Directory_="codecs_DIR" Attributes="0" KeyPath="decvw_32.dll"/>
+    <ROW Component="drv33260.dll" ComponentId="{366562B9-2D17-4C3A-867B-BA3E41335F63}" Directory_="codecs_DIR" Attributes="0" KeyPath="drv33260.dll"/>
+    <ROW Component="drv43260.dll" ComponentId="{2EA7B552-AACD-4686-8FB6-29403A7983BF}" Directory_="codecs_DIR" Attributes="0" KeyPath="drv43260.dll"/>
+    <ROW Component="dsnative.dll" ComponentId="{5F8716C7-E99F-400B-B676-F6E6D1757DB9}" Directory_="mplayer_DIR" Attributes="0" KeyPath="dsnative.dll"/>
+    <ROW Component="fix_globaladvance.conf" ComponentId="{0055C68F-0065-4340-8A0B-DA242620CE10}" Directory_="conf.d_DIR" Attributes="0" KeyPath="fix_globaladvance.conf_1" Type="0"/>
+    <ROW Component="fonts.conf" ComponentId="{F197A5E1-169D-4099-B6CA-BF2922B7CB9E}" Directory_="fonts_DIR" Attributes="0" KeyPath="fonts.conf" Type="0"/>
+    <ROW Component="icmw_32.dll" ComponentId="{7C594C7F-EF8E-47E3-BD17-8EB3B091C375}" Directory_="codecs_DIR" Attributes="0" KeyPath="icmw_32.dll"/>
+    <ROW Component="ir41_32.dll" ComponentId="{5C28D6EA-E144-4555-ADB2-117D17DBB696}" Directory_="codecs_DIR" Attributes="0" KeyPath="ir41_32.dll"/>
+    <ROW Component="ir50_32.dll" ComponentId="{C4C67C24-F4D8-4A5F-892C-18AFFF86AF18}" Directory_="codecs_DIR" Attributes="0" KeyPath="ir50_32.dll"/>
+    <ROW Component="ivvideo.dll" ComponentId="{78D6F615-FDD4-4E7A-BAD7-CDC73B6857AC}" Directory_="codecs_DIR" Attributes="0" KeyPath="ivvideo.dll"/>
+    <ROW Component="jp2avi.dll" ComponentId="{F30E9577-41E8-4AFD-8CDA-55AFA52B84F0}" Directory_="codecs_DIR" Attributes="0" KeyPath="jp2avi.dll"/>
+    <ROW Component="lcmw2.dll" ComponentId="{68E917F5-22E9-4856-8DCC-531EBFF34413}" Directory_="codecs_DIR" Attributes="0" KeyPath="lcmw2.dll"/>
+    <ROW Component="libgcc_s_dw2_1.dll" ComponentId="{1453806A-6783-4687-B065-72CF70BEDB3A}" Directory_="APPDIR" Attributes="0" KeyPath="libgcc_s_dw2_1.dll"/>
+    <ROW Component="lsvxdec.dll" ComponentId="{A019E172-B2A4-473B-A140-AB4DF257C75D}" Directory_="codecs_DIR" Attributes="0" KeyPath="lsvxdec.dll"/>
+    <ROW Component="m3jp2k32.dll" ComponentId="{94C2096A-91CB-4310-88F6-71614A34AB08}" Directory_="codecs_DIR" Attributes="0" KeyPath="m3jp2k32.dll"/>
+    <ROW Component="mingwm10.dll" ComponentId="{28B67296-E0DD-4C17-9ED4-44B53BEA2213}" Directory_="APPDIR" Attributes="0" KeyPath="mingwm10.dll"/>
+    <ROW Component="mplayer.exe" ComponentId="{A5C669A2-63FB-4E18-9E98-178ABAF67A94}" Directory_="mplayer_DIR" Attributes="0" KeyPath="mplayer.exe"/>
+    <ROW Component="pncrt.dll" ComponentId="{59ADDEC7-8731-4556-9B7E-03A61CDE5D37}" Directory_="codecs_DIR" Attributes="0" KeyPath="pncrt.dll"/>
+    <ROW Component="qpeg32.dll" ComponentId="{86DB48CA-2145-4300-86FE-E3345CA02156}" Directory_="codecs_DIR" Attributes="0" KeyPath="qpeg32.dll"/>
+    <ROW Component="qtmlClient.dll" ComponentId="{3117F488-1D78-4111-9080-108214AE2815}" Directory_="codecs_DIR" Attributes="0" KeyPath="qtmlClient.dll"/>
+    <ROW Component="rt32dcmp.dll" ComponentId="{03C931BA-79C2-47B9-B80B-94FC038DC046}" Directory_="codecs_DIR" Attributes="0" KeyPath="rt32dcmp.dll"/>
+    <ROW Component="sipr3260.dll" ComponentId="{ADC55081-029D-4058-A7AB-BFEBBA55084A}" Directory_="codecs_DIR" Attributes="0" KeyPath="sipr3260.dll"/>
+    <ROW Component="tokr3260.dll" ComponentId="{1B3711C9-87C9-41C8-A851-C509357D013F}" Directory_="codecs_DIR" Attributes="0" KeyPath="tokr3260.dll"/>
+    <ROW Component="tvqdec.dll" ComponentId="{7A7C95E8-3F08-4D39-94C4-8D942A3A955F}" Directory_="codecs_DIR" Attributes="0" KeyPath="tvqdec.dll"/>
+    <ROW Component="vdodec32.dll" ComponentId="{3EBD7CA2-B08B-45E1-9057-6A9FCEE05AAC}" Directory_="codecs_DIR" Attributes="0" KeyPath="vdodec32.dll"/>
+    <ROW Component="vfw2menc.exe" ComponentId="{07DB4A44-285F-4FA0-9BFB-CADEAF53A5BE}" Directory_="mplayer_DIR" Attributes="0" KeyPath="vfw2menc.exe"/>
+    <ROW Component="vmnc.dll" ComponentId="{3F0169D5-B4D8-4ACF-BF30-4294FBD91FDA}" Directory_="codecs_DIR" Attributes="0" KeyPath="vmnc.dll"/>
+    <ROW Component="vp4vfw.dll" ComponentId="{4DB19A3C-D09A-4F3B-ADE4-11C0A9907096}" Directory_="codecs_DIR" Attributes="0" KeyPath="vp4vfw.dll"/>
+    <ROW Component="vp6vfw.dll" ComponentId="{FC9A9D18-8AEA-4BE1-9E1E-627F89706623}" Directory_="codecs_DIR" Attributes="0" KeyPath="vp6vfw.dll"/>
+    <ROW Component="vp7vfw.dll" ComponentId="{9D38B5D4-4A87-4659-BD4A-883DA8F2D98A}" Directory_="codecs_DIR" Attributes="0" KeyPath="vp7vfw.dll"/>
+    <ROW Component="vssh264.dll" ComponentId="{4FA37F84-6125-4C4B-804A-11CD52B92E72}" Directory_="codecs_DIR" Attributes="0" KeyPath="vssh264.dll"/>
+    <ROW Component="vssh264core.dll" ComponentId="{EA2F803A-3B73-4AB4-AB81-EB87C5C20B93}" Directory_="codecs_DIR" Attributes="0" KeyPath="vssh264core.dll"/>
+    <ROW Component="vssh264dec.dll" ComponentId="{56359599-E64A-45B6-9FBE-01102D478ABB}" Directory_="codecs_DIR" Attributes="0" KeyPath="vssh264dec.dll"/>
+    <ROW Component="vsshdsd.dll" ComponentId="{38AFAA10-8BF8-4C9C-BD19-4D2F79DD7B86}" Directory_="codecs_DIR" Attributes="0" KeyPath="vsshdsd.dll"/>
+    <ROW Component="vsslight.dll" ComponentId="{4C4D7867-F30E-4C14-8FBF-217D391E5746}" Directory_="codecs_DIR" Attributes="0" KeyPath="vsslight.dll"/>
+    <ROW Component="vsswlt.dll" ComponentId="{6F15730A-D74B-4AF4-886B-5A29FC5D18DB}" Directory_="codecs_DIR" Attributes="0" KeyPath="vsswlt.dll"/>
+    <ROW Component="wma9dmod.dll" ComponentId="{8A763B40-2559-4308-BFD9-E58B02E5FC75}" Directory_="codecs_DIR" Attributes="0" KeyPath="wma9dmod.dll"/>
+    <ROW Component="wmadmod.dll" ComponentId="{54609A3B-2E0D-4632-8355-C01F0B274F1F}" Directory_="codecs_DIR" Attributes="0" KeyPath="wmadmod.dll"/>
+    <ROW Component="wmsdmod.dll" ComponentId="{B94DF2C6-40EB-4724-A3D4-C9DC3CEC42AF}" Directory_="codecs_DIR" Attributes="0" KeyPath="wmsdmod.dll"/>
+    <ROW Component="wmspdmod.dll" ComponentId="{5B58FD48-028D-42DE-ACE2-31ABAE602297}" Directory_="codecs_DIR" Attributes="0" KeyPath="wmspdmod.dll"/>
+    <ROW Component="wmv9dmod.dll" ComponentId="{756BC33F-0BCF-450C-BFBD-953CA88BC30A}" Directory_="codecs_DIR" Attributes="0" KeyPath="wmv9dmod.dll"/>
+    <ROW Component="wmvadvd.dll" ComponentId="{A385CDCC-52AD-4C98-8344-844D870908B9}" Directory_="codecs_DIR" Attributes="0" KeyPath="wmvadvd.dll"/>
+    <ROW Component="wmvdmod.dll" ComponentId="{423F1C6A-F7BB-4824-B84D-BF8B1003E962}" Directory_="codecs_DIR" Attributes="0" KeyPath="wmvdmod.dll"/>
+    <ROW Component="wnvwinx.dll" ComponentId="{79D56361-B14C-41A2-8730-4CAFE01092E6}" Directory_="codecs_DIR" Attributes="0" KeyPath="wnvwinx.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="BMplayer.exe ChangeLog.txt libgcc_s_dw2_1.dll mingwm10.dll acelpdec.ax aslcodec_dshow.dll clrviddc.dll clrviddd.dll cook.dll CtWbJpg.DLL decvw_32.dll drv33260.dll drv43260.dll icmw_32.dll ir41_32.dll ir50_32.dll ivvideo.dll jp2avi.dll lcmw2.dll LCODCCMW2E.dll lsvxdec.dll m3jp2k32.dll pncrt.dll qpeg32.dll qtmlClient.dll rt32dcmp.dll sipr3260.dll tokr3260.dll tvqdec.dll vdodec32.dll ViVD2.dll vmnc.dll vp4vfw.dll vp6vfw.dll vp7vfw.dll vssh264.dll vssh264core.dll vssh264dec.dll vsshdsd.dll vsslight.dll vsswlt.dll wma9dmod.dll wmadmod.dll wmsdmod.dll wmspdmod.dll wmv9dmod.dll wmvadvd.dll wmvdmod.dll wnvwinx.dll COPYING_dsnative.txt aalib.html dsnative.dll autohint.conf fix_globaladvance.conf fonts.conf codecs.conf mplayer.exe vfw2menc.exe QtCore4.dll QtGui4.dll SHORTCUTDIR AI_ExePath"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AvidQTAVUICodec.qtx" Component_="acelpdec.ax" FileName="AvidQT~1.qtx|AvidQTAVUICodec.qtx" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\AvidQTAVUICodec.qtx" SelfReg="false" Sequence="9"/>
+    <ROW File="BMPlayer.ico" Component_="ChangeLog.txt" FileName="BMPlayer.ico" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\BMPlayer.ico" SelfReg="false" Sequence="213"/>
+    <ROW File="BMplayer.exe" Component_="BMplayer.exe" FileName="BMplayer.exe" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\BMplayer.exe" SelfReg="false" Sequence="1"/>
+    <ROW File="BeHereiVideo.qtx" Component_="acelpdec.ax" FileName="BeHere~1.qtx|BeHereiVideo.qtx" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\BeHereiVideo.qtx" SelfReg="false" Sequence="10"/>
+    <ROW File="COPYING_dsnative.txt" Component_="COPYING_dsnative.txt" FileName="COPYIN~1.txt|COPYING-dsnative.txt" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\COPYING-dsnative.txt" SelfReg="false" Sequence="68"/>
+    <ROW File="ChangeLog.txt" Component_="ChangeLog.txt" FileName="Change~1.txt|ChangeLog.txt" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\ChangeLog.txt" SelfReg="false" Sequence="2"/>
+    <ROW File="CtWbJpg.DLL" Component_="CtWbJpg.DLL" FileName="CtWbJpg.DLL" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\CtWbJpg.DLL" SelfReg="false" Sequence="14"/>
+    <ROW File="LCODCCMW2E.dll" Component_="LCODCCMW2E.dll" FileName="LCODCC~1.dll|LCODCCMW2E.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\LCODCCMW2E.dll" SelfReg="false" Sequence="25"/>
+    <ROW File="LICENSE.txt" Component_="ChangeLog.txt" FileName="LICENSE.txt" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\LICENSE.txt" SelfReg="false" Sequence="4"/>
+    <ROW File="QtCore4.dll" Component_="QtCore4.dll" FileName="QtCore4.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\QtCore4.dll" SelfReg="false" Sequence="211"/>
+    <ROW File="QtGui4.dll" Component_="QtGui4.dll" FileName="QtGui4.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\QtGui4.dll" SelfReg="false" Sequence="212"/>
+    <ROW File="QuickTime.qts" Component_="acelpdec.ax" FileName="QuickT~1.qts|QuickTime.qts" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\QuickTime.qts" SelfReg="false" Sequence="37"/>
+    <ROW File="QuickTimeEssentials.qtx" Component_="acelpdec.ax" FileName="QuickT~1.qtx|QuickTimeEssentials.qtx" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\QuickTimeEssentials.qtx" SelfReg="false" Sequence="38"/>
+    <ROW File="QuickTimeInternetExtras.qtx" Component_="acelpdec.ax" FileName="QuickT~2.qtx|QuickTimeInternetExtras.qtx" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\QuickTimeInternetExtras.qtx" SelfReg="false" Sequence="39"/>
+    <ROW File="README" Component_="fix_globaladvance.conf" FileName="README" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\README" SelfReg="false" Sequence="199"/>
+    <ROW File="Readme.txt" Component_="acelpdec.ax" FileName="Readme.txt" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\Readme.txt" SelfReg="false" Sequence="40"/>
+    <ROW File="ViVD2.dll" Component_="ViVD2.dll" FileName="ViVD2.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\ViVD2.dll" SelfReg="false" Sequence="47"/>
+    <ROW File="aalib.html" Component_="aalib.html" FileName="aalib~1.htm|aalib.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\aalib.html" SelfReg="false" Sequence="69"/>
+    <ROW File="acelpdec.ax" Component_="acelpdec.ax" FileName="acelpdec.ax" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\acelpdec.ax" SelfReg="false" Sequence="6"/>
+    <ROW File="advaudio_channels.html" Component_="aalib.html" FileName="advaud~1.htm|advaudio-channels.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\advaudio-channels.html" SelfReg="false" Sequence="70"/>
+    <ROW File="advaudio_surround.html" Component_="aalib.html" FileName="advaud~2.htm|advaudio-surround.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\advaudio-surround.html" SelfReg="false" Sequence="71"/>
+    <ROW File="advaudio_volume.html" Component_="aalib.html" FileName="advaud~3.htm|advaudio-volume.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\advaudio-volume.html" SelfReg="false" Sequence="72"/>
+    <ROW File="alf2cd.acm" Component_="acelpdec.ax" FileName="alf2cd.acm" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\alf2cd.acm" SelfReg="false" Sequence="7"/>
+    <ROW File="aslcodec_dshow.dll" Component_="aslcodec_dshow.dll" FileName="aslcod~1.dll|aslcodec_dshow.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\aslcodec_dshow.dll" SelfReg="false" Sequence="8"/>
+    <ROW File="aspect.html" Component_="aalib.html" FileName="aspect~1.htm|aspect.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\aspect.html" SelfReg="false" Sequence="73"/>
+    <ROW File="autohint.conf" Component_="autohint.conf" FileName="10-aut~1.con|10-autohint.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\10-autohint.conf" SelfReg="false" Sequence="158"/>
+    <ROW File="blinkenlights.html" Component_="aalib.html" FileName="blinke~1.htm|blinkenlights.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\blinkenlights.html" SelfReg="false" Sequence="74"/>
+    <ROW File="bsd.html" Component_="aalib.html" FileName="bsd~1.htm|bsd.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\bsd.html" SelfReg="false" Sequence="75"/>
+    <ROW File="bugreports.html" Component_="aalib.html" FileName="bugrep~1.htm|bugreports.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\bugreports.html" SelfReg="false" Sequence="76"/>
+    <ROW File="bugreports_advusers.html" Component_="aalib.html" FileName="bugrep~2.htm|bugreports_advusers.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\bugreports_advusers.html" SelfReg="false" Sequence="77"/>
+    <ROW File="bugreports_fix.html" Component_="aalib.html" FileName="bugrep~3.htm|bugreports_fix.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\bugreports_fix.html" SelfReg="false" Sequence="78"/>
+    <ROW File="bugreports_regression_test.html" Component_="aalib.html" FileName="bugrep~4.htm|bugreports_regression_test.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\bugreports_regression_test.html" SelfReg="false" Sequence="79"/>
+    <ROW File="bugreports_report.html" Component_="aalib.html" FileName="bugrep~5.htm|bugreports_report.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\bugreports_report.html" SelfReg="false" Sequence="80"/>
+    <ROW File="bugreports_security.html" Component_="aalib.html" FileName="bugrep~6.htm|bugreports_security.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\bugreports_security.html" SelfReg="false" Sequence="81"/>
+    <ROW File="bugreports_what.html" Component_="aalib.html" FileName="bugrep~7.htm|bugreports_what.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\bugreports_what.html" SelfReg="false" Sequence="82"/>
+    <ROW File="bugreports_where.html" Component_="aalib.html" FileName="bugrep~8.htm|bugreports_where.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\bugreports_where.html" SelfReg="false" Sequence="83"/>
+    <ROW File="caca.html" Component_="aalib.html" FileName="caca~1.htm|caca.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\caca.html" SelfReg="false" Sequence="84"/>
+    <ROW File="clrviddc.dll" Component_="clrviddc.dll" FileName="clrviddc.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\clrviddc.dll" SelfReg="false" Sequence="11"/>
+    <ROW File="clrviddd.dll" Component_="clrviddd.dll" FileName="clrviddd.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\clrviddd.dll" SelfReg="false" Sequence="12"/>
+    <ROW File="codec_installation.html" Component_="aalib.html" FileName="codec-~1.htm|codec-installation.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\codec-installation.html" SelfReg="false" Sequence="85"/>
+    <ROW File="codecs.conf" Component_="codecs.conf" FileName="codecs~1.con|codecs.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\mplayer\codecs.conf" SelfReg="false" Sequence="203"/>
+    <ROW File="commandline.html" Component_="aalib.html" FileName="comman~1.htm|commandline.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\commandline.html" SelfReg="false" Sequence="86"/>
+    <ROW File="config" Component_="codecs.conf" FileName="config" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\mplayer\config" SelfReg="false" Sequence="204"/>
+    <ROW File="control.html" Component_="aalib.html" FileName="contro~1.htm|control.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\control.html" SelfReg="false" Sequence="87"/>
+    <ROW File="cook.dll" Component_="cook.dll" FileName="cook.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\cook.dll" SelfReg="false" Sequence="13"/>
+    <ROW File="decvw_32.dll" Component_="decvw_32.dll" FileName="decvw_32.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\decvw_32.dll" SelfReg="false" Sequence="15"/>
+    <ROW File="default.css" Component_="aalib.html" FileName="default.css" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\default.css" SelfReg="false" Sequence="88"/>
+    <ROW File="delicious.conf" Component_="autohint.conf" FileName="80-del~1.con|80-delicious.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\80-delicious.conf" SelfReg="false" Sequence="182"/>
+    <ROW File="delicious.conf_1" Component_="fix_globaladvance.conf" FileName="80-del~1.con|80-delicious.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\80-delicious.conf" SelfReg="false" Sequence="197"/>
+    <ROW File="dfbmga.html" Component_="aalib.html" FileName="dfbmga~1.htm|dfbmga.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\dfbmga.html" SelfReg="false" Sequence="89"/>
+    <ROW File="dga.html" Component_="aalib.html" FileName="dga~1.htm|dga.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\dga.html" SelfReg="false" Sequence="90"/>
+    <ROW File="directfb.html" Component_="aalib.html" FileName="direct~1.htm|directfb.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\directfb.html" SelfReg="false" Sequence="91"/>
+    <ROW File="drv33260.dll" Component_="drv33260.dll" FileName="drv33260.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\drv33260.dll" SelfReg="false" Sequence="16"/>
+    <ROW File="drv43260.dll" Component_="drv43260.dll" FileName="drv43260.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\drv43260.dll" SelfReg="false" Sequence="17"/>
+    <ROW File="dsnative.dll" Component_="dsnative.dll" FileName="dsnative.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\dsnative.dll" SelfReg="false" Sequence="157"/>
+    <ROW File="dummy.html" Component_="aalib.html" FileName="dummy~1.htm|dummy.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\dummy.html" SelfReg="false" Sequence="92"/>
+    <ROW File="dvd.html" Component_="aalib.html" FileName="dvd~1.htm|dvd.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\dvd.html" SelfReg="false" Sequence="93"/>
+    <ROW File="edl.html" Component_="aalib.html" FileName="edl~1.htm|edl.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\edl.html" SelfReg="false" Sequence="94"/>
+    <ROW File="encoding_guide.html" Component_="aalib.html" FileName="encodi~1.htm|encoding-guide.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\encoding-guide.html" SelfReg="false" Sequence="95"/>
+    <ROW File="faq.html" Component_="aalib.html" FileName="faq~1.htm|faq.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\faq.html" SelfReg="false" Sequence="96"/>
+    <ROW File="fbdev.html" Component_="aalib.html" FileName="fbdev~1.htm|fbdev.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\fbdev.html" SelfReg="false" Sequence="97"/>
+    <ROW File="features.html" Component_="aalib.html" FileName="featur~1.htm|features.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\features.html" SelfReg="false" Sequence="98"/>
+    <ROW File="fix_globaladvance.conf" Component_="autohint.conf" FileName="20-fix~1.con|20-fix-globaladvance.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\20-fix-globaladvance.conf" SelfReg="false" Sequence="165"/>
+    <ROW File="fix_globaladvance.conf_1" Component_="fix_globaladvance.conf" FileName="20-fix~1.con|20-fix-globaladvance.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\20-fix-globaladvance.conf" SelfReg="false" Sequence="184"/>
+    <ROW File="fonts.conf" Component_="fonts.conf" FileName="fonts~1.con|fonts.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\fonts.conf" SelfReg="false" Sequence="200"/>
+    <ROW File="fonts.dtd" Component_="fonts.conf" FileName="fonts.dtd" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\fonts.dtd" SelfReg="false" Sequence="201"/>
+    <ROW File="fonts_osd.html" Component_="aalib.html" FileName="fonts-~1.htm|fonts-osd.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\fonts-osd.html" SelfReg="false" Sequence="99"/>
+    <ROW File="fonts_persian.conf" Component_="autohint.conf" FileName="65-fon~1.con|65-fonts-persian.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\65-fonts-persian.conf" SelfReg="false" Sequence="176"/>
+    <ROW File="fonts_persian.conf_1" Component_="fix_globaladvance.conf" FileName="65-fon~1.con|65-fonts-persian.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\65-fonts-persian.conf" SelfReg="false" Sequence="194"/>
+    <ROW File="gui.html" Component_="aalib.html" FileName="gui~1.htm|gui.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\gui.html" SelfReg="false" Sequence="100"/>
+    <ROW File="howtoread.html" Component_="aalib.html" FileName="howtor~1.htm|howtoread.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\howtoread.html" SelfReg="false" Sequence="101"/>
+    <ROW File="iac25_32.ax" Component_="acelpdec.ax" FileName="iac25_32.ax" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\iac25_32.ax" SelfReg="false" Sequence="18"/>
+    <ROW File="icmw_32.dll" Component_="icmw_32.dll" FileName="icmw_32.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\icmw_32.dll" SelfReg="false" Sequence="19"/>
+    <ROW File="index.html" Component_="aalib.html" FileName="index~1.htm|index.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\index.html" SelfReg="false" Sequence="102"/>
+    <ROW File="input.conf" Component_="codecs.conf" FileName="input~1.con|input.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\mplayer\input.conf" SelfReg="false" Sequence="205"/>
+    <ROW File="install.html" Component_="aalib.html" FileName="instal~1.htm|install.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\install.html" SelfReg="false" Sequence="103"/>
+    <ROW File="intro.html" Component_="aalib.html" FileName="intro~1.htm|intro.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\intro.html" SelfReg="false" Sequence="104"/>
+    <ROW File="ir41_32.dll" Component_="ir41_32.dll" FileName="ir41_32.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\ir41_32.dll" SelfReg="false" Sequence="20"/>
+    <ROW File="ir50_32.dll" Component_="ir50_32.dll" FileName="ir50_32.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\ir50_32.dll" SelfReg="false" Sequence="21"/>
+    <ROW File="ivvideo.dll" Component_="ivvideo.dll" FileName="ivvideo.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\ivvideo.dll" SelfReg="false" Sequence="22"/>
+    <ROW File="jp2avi.dll" Component_="jp2avi.dll" FileName="jp2avi.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\jp2avi.dll" SelfReg="false" Sequence="23"/>
+    <ROW File="khmer.conf" Component_="autohint.conf" FileName="65-khm~1.con|65-khmer.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\65-khmer.conf" SelfReg="false" Sequence="177"/>
+    <ROW File="latin.conf" Component_="autohint.conf" FileName="45-lat~1.con|45-latin.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\45-latin.conf" SelfReg="false" Sequence="171"/>
+    <ROW File="latin.conf_1" Component_="autohint.conf" FileName="60-lat~1.con|60-latin.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\60-latin.conf" SelfReg="false" Sequence="175"/>
+    <ROW File="latin.conf_2" Component_="fix_globaladvance.conf" FileName="45-lat~1.con|45-latin.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\45-latin.conf" SelfReg="false" Sequence="189"/>
+    <ROW File="latin.conf_3" Component_="fix_globaladvance.conf" FileName="60-lat~1.con|60-latin.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\60-latin.conf" SelfReg="false" Sequence="193"/>
+    <ROW File="lcmw2.dll" Component_="lcmw2.dll" FileName="lcmw2.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\lcmw2.dll" SelfReg="false" Sequence="24"/>
+    <ROW File="lhacm.acm" Component_="acelpdec.ax" FileName="lhacm.acm" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\lhacm.acm" SelfReg="false" Sequence="26"/>
+    <ROW File="libgcc_s_dw2_1.dll" Component_="libgcc_s_dw2_1.dll" FileName="libgcc~1.dll|libgcc_s_dw2-1.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\libgcc_s_dw2-1.dll" SelfReg="false" Sequence="3"/>
+    <ROW File="license.txt_1" Component_="COPYING_dsnative.txt" FileName="license.txt" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\license.txt" SelfReg="false" Sequence="202"/>
+    <ROW File="linux.html" Component_="aalib.html" FileName="linux~1.htm|linux.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\linux.html" SelfReg="false" Sequence="105"/>
+    <ROW File="local.conf" Component_="autohint.conf" FileName="51-loc~1.con|51-local.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\51-local.conf" SelfReg="false" Sequence="174"/>
+    <ROW File="local.conf_1" Component_="fix_globaladvance.conf" FileName="51-loc~1.con|51-local.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\51-local.conf" SelfReg="false" Sequence="192"/>
+    <ROW File="lsvxdec.dll" Component_="lsvxdec.dll" FileName="lsvxdec.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\lsvxdec.dll" SelfReg="false" Sequence="27"/>
+    <ROW File="m3jp2k32.dll" Component_="m3jp2k32.dll" FileName="m3jp2k32.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\m3jp2k32.dll" SelfReg="false" Sequence="28"/>
+    <ROW File="macos.html" Component_="aalib.html" FileName="macos~1.htm|macos.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\macos.html" SelfReg="false" Sequence="106"/>
+    <ROW File="menc_feat_dvd_mpeg4.html" Component_="aalib.html" FileName="menc-f~1.htm|menc-feat-dvd-mpeg4.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-dvd-mpeg4.html" SelfReg="false" Sequence="107"/>
+    <ROW File="menc_feat_enc_images.html" Component_="aalib.html" FileName="menc-f~2.htm|menc-feat-enc-images.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-enc-images.html" SelfReg="false" Sequence="108"/>
+    <ROW File="menc_feat_enc_libavcodec.html" Component_="aalib.html" FileName="menc-f~3.htm|menc-feat-enc-libavcodec.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-enc-libavcodec.html" SelfReg="false" Sequence="109"/>
+    <ROW File="menc_feat_extractsub.html" Component_="aalib.html" FileName="menc-f~4.htm|menc-feat-extractsub.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-extractsub.html" SelfReg="false" Sequence="110"/>
+    <ROW File="menc_feat_handheld_psp.html" Component_="aalib.html" FileName="menc-f~5.htm|menc-feat-handheld-psp.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-handheld-psp.html" SelfReg="false" Sequence="111"/>
+    <ROW File="menc_feat_mpeg.html" Component_="aalib.html" FileName="menc-f~6.htm|menc-feat-mpeg.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-mpeg.html" SelfReg="false" Sequence="112"/>
+    <ROW File="menc_feat_mpeg4.html" Component_="aalib.html" FileName="menc-f~7.htm|menc-feat-mpeg4.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-mpeg4.html" SelfReg="false" Sequence="113"/>
+    <ROW File="menc_feat_quicktime_7.html" Component_="aalib.html" FileName="menc-f~8.htm|menc-feat-quicktime-7.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-quicktime-7.html" SelfReg="false" Sequence="114"/>
+    <ROW File="menc_feat_rescale.html" Component_="aalib.html" FileName="menc-f~9.htm|menc-feat-rescale.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-rescale.html" SelfReg="false" Sequence="115"/>
+    <ROW File="menc_feat_selecting_codec.html" Component_="aalib.html" FileName="menc-~10.htm|menc-feat-selecting-codec.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-selecting-codec.html" SelfReg="false" Sequence="116"/>
+    <ROW File="menc_feat_selecting_input.html" Component_="aalib.html" FileName="menc-~11.htm|menc-feat-selecting-input.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-selecting-input.html" SelfReg="false" Sequence="117"/>
+    <ROW File="menc_feat_streamcopy.html" Component_="aalib.html" FileName="menc-~12.htm|menc-feat-streamcopy.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-streamcopy.html" SelfReg="false" Sequence="118"/>
+    <ROW File="menc_feat_telecine.html" Component_="aalib.html" FileName="menc-~13.htm|menc-feat-telecine.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-telecine.html" SelfReg="false" Sequence="119"/>
+    <ROW File="menc_feat_vcd_dvd.html" Component_="aalib.html" FileName="menc-~14.htm|menc-feat-vcd-dvd.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-vcd-dvd.html" SelfReg="false" Sequence="120"/>
+    <ROW File="menc_feat_video_for_windows.html" Component_="aalib.html" FileName="menc-~15.htm|menc-feat-video-for-windows.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-video-for-windows.html" SelfReg="false" Sequence="121"/>
+    <ROW File="menc_feat_x264.html" Component_="aalib.html" FileName="menc-~16.htm|menc-feat-x264.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-x264.html" SelfReg="false" Sequence="122"/>
+    <ROW File="menc_feat_xvid.html" Component_="aalib.html" FileName="menc-~17.htm|menc-feat-xvid.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\menc-feat-xvid.html" SelfReg="false" Sequence="123"/>
+    <ROW File="mencoder.html" Component_="aalib.html" FileName="mencod~1.htm|mencoder.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\mencoder.html" SelfReg="false" Sequence="124"/>
+    <ROW File="metric_aliases.conf" Component_="autohint.conf" FileName="30-met~1.con|30-metric-aliases.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\30-metric-aliases.conf" SelfReg="false" Sequence="168"/>
+    <ROW File="metric_aliases.conf_1" Component_="fix_globaladvance.conf" FileName="30-met~1.con|30-metric-aliases.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\30-metric-aliases.conf" SelfReg="false" Sequence="186"/>
+    <ROW File="mga_vid.html" Component_="aalib.html" FileName="mga_vi~1.htm|mga_vid.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\mga_vid.html" SelfReg="false" Sequence="125"/>
+    <ROW File="mi_sc4.acm" Component_="acelpdec.ax" FileName="mi-sc4.acm" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\mi-sc4.acm" SelfReg="false" Sequence="29"/>
+    <ROW File="mingwm10.dll" Component_="mingwm10.dll" FileName="mingwm10.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mingwm10.dll" SelfReg="false" Sequence="5"/>
+    <ROW File="mpeg_decoders.html" Component_="aalib.html" FileName="mpeg_d~1.htm|mpeg_decoders.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\mpeg_decoders.html" SelfReg="false" Sequence="126"/>
+    <ROW File="mplayer.exe" Component_="mplayer.exe" FileName="mplayer.exe" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\mplayer.exe" SelfReg="false" Sequence="207"/>
+    <ROW File="mplayer.html" Component_="COPYING_dsnative.txt" FileName="mplaye~1.htm|mplayer.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\mplayer.html" SelfReg="false" Sequence="208"/>
+    <ROW File="msh261.drv" Component_="acelpdec.ax" FileName="msh261.drv" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\msh261.drv" SelfReg="false" Sequence="30"/>
+    <ROW File="msms001.vwp" Component_="acelpdec.ax" FileName="msms001.vwp" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\msms001.vwp" SelfReg="false" Sequence="31"/>
+    <ROW File="msscds32.ax" Component_="acelpdec.ax" FileName="msscds32.ax" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\msscds32.ax" SelfReg="false" Sequence="32"/>
+    <ROW File="networksync.html" Component_="aalib.html" FileName="networ~1.htm|networksync.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\networksync.html" SelfReg="false" Sequence="127"/>
+    <ROW File="no_bitmaps.conf" Component_="autohint.conf" FileName="70-no-~1.con|70-no-bitmaps.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\70-no-bitmaps.conf" SelfReg="false" Sequence="180"/>
+    <ROW File="no_sub_pixel.conf" Component_="autohint.conf" FileName="10-no-~1.con|10-no-sub-pixel.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\10-no-sub-pixel.conf" SelfReg="false" Sequence="159"/>
+    <ROW File="nonlatin.conf" Component_="autohint.conf" FileName="40-non~1.con|40-nonlatin.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\40-nonlatin.conf" SelfReg="false" Sequence="170"/>
+    <ROW File="nonlatin.conf_1" Component_="autohint.conf" FileName="65-non~1.con|65-nonlatin.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\65-nonlatin.conf" SelfReg="false" Sequence="178"/>
+    <ROW File="nonlatin.conf_2" Component_="fix_globaladvance.conf" FileName="40-non~1.con|40-nonlatin.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\40-nonlatin.conf" SelfReg="false" Sequence="188"/>
+    <ROW File="nonlatin.conf_3" Component_="fix_globaladvance.conf" FileName="65-non~1.con|65-nonlatin.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\65-nonlatin.conf" SelfReg="false" Sequence="195"/>
+    <ROW File="nsrt2432.acm" Component_="acelpdec.ax" FileName="nsrt2432.acm" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\nsrt2432.acm" SelfReg="false" Sequence="33"/>
+    <ROW File="opengl.html" Component_="aalib.html" FileName="opengl~1.htm|opengl.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\opengl.html" SelfReg="false" Sequence="128"/>
+    <ROW File="pncrt.dll" Component_="pncrt.dll" FileName="pncrt.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\pncrt.dll" SelfReg="false" Sequence="34"/>
+    <ROW File="ports.html" Component_="aalib.html" FileName="ports~1.htm|ports.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\ports.html" SelfReg="false" Sequence="129"/>
+    <ROW File="qpeg32.dll" Component_="qpeg32.dll" FileName="qpeg32.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\qpeg32.dll" SelfReg="false" Sequence="35"/>
+    <ROW File="qtmlClient.dll" Component_="qtmlClient.dll" FileName="qtmlCl~1.dll|qtmlClient.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\qtmlClient.dll" SelfReg="false" Sequence="36"/>
+    <ROW File="radio.html" Component_="aalib.html" FileName="radio~1.htm|radio.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\radio.html" SelfReg="false" Sequence="130"/>
+    <ROW File="readme.txt_1" Component_="COPYING_dsnative.txt" FileName="readme.txt" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\readme.txt" SelfReg="false" Sequence="209"/>
+    <ROW File="rt32dcmp.dll" Component_="rt32dcmp.dll" FileName="rt32dcmp.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\rt32dcmp.dll" SelfReg="false" Sequence="41"/>
+    <ROW File="rtc.html" Component_="aalib.html" FileName="rtc~1.htm|rtc.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\rtc.html" SelfReg="false" Sequence="131"/>
+    <ROW File="sansserif.conf" Component_="autohint.conf" FileName="49-san~1.con|49-sansserif.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\49-sansserif.conf" SelfReg="false" Sequence="172"/>
+    <ROW File="sansserif.conf_1" Component_="fix_globaladvance.conf" FileName="49-san~1.con|49-sansserif.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\49-sansserif.conf" SelfReg="false" Sequence="190"/>
+    <ROW File="sipr3260.dll" Component_="sipr3260.dll" FileName="sipr3260.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\sipr3260.dll" SelfReg="false" Sequence="42"/>
+    <ROW File="skin.html" Component_="aalib.html" FileName="skin~1.htm|skin.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\skin.html" SelfReg="false" Sequence="137"/>
+    <ROW File="skin_file.html" Component_="aalib.html" FileName="skin-f~1.htm|skin-file.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\skin-file.html" SelfReg="false" Sequence="132"/>
+    <ROW File="skin_fonts.html" Component_="aalib.html" FileName="skin-f~2.htm|skin-fonts.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\skin-fonts.html" SelfReg="false" Sequence="133"/>
+    <ROW File="skin_gui.html" Component_="aalib.html" FileName="skin-g~1.htm|skin-gui.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\skin-gui.html" SelfReg="false" Sequence="134"/>
+    <ROW File="skin_overview.html" Component_="aalib.html" FileName="skin-o~1.htm|skin-overview.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\skin-overview.html" SelfReg="false" Sequence="135"/>
+    <ROW File="skin_quality.html" Component_="aalib.html" FileName="skin-q~1.htm|skin-quality.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\skin-quality.html" SelfReg="false" Sequence="136"/>
+    <ROW File="softreq.html" Component_="aalib.html" FileName="softre~1.htm|softreq.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\softreq.html" SelfReg="false" Sequence="138"/>
+    <ROW File="streaming.html" Component_="aalib.html" FileName="stream~1.htm|streaming.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\streaming.html" SelfReg="false" Sequence="139"/>
+    <ROW File="sub_pixel_bgr.conf" Component_="autohint.conf" FileName="10-sub~1.con|10-sub-pixel-bgr.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\10-sub-pixel-bgr.conf" SelfReg="false" Sequence="160"/>
+    <ROW File="sub_pixel_rgb.conf" Component_="autohint.conf" FileName="10-sub~2.con|10-sub-pixel-rgb.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\10-sub-pixel-rgb.conf" SelfReg="false" Sequence="161"/>
+    <ROW File="sub_pixel_vbgr.conf" Component_="autohint.conf" FileName="10-sub~3.con|10-sub-pixel-vbgr.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\10-sub-pixel-vbgr.conf" SelfReg="false" Sequence="162"/>
+    <ROW File="sub_pixel_vrgb.conf" Component_="autohint.conf" FileName="10-sub~4.con|10-sub-pixel-vrgb.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\10-sub-pixel-vrgb.conf" SelfReg="false" Sequence="163"/>
+    <ROW File="subfont.ttf" Component_="codecs.conf" FileName="subfont.ttf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\mplayer\subfont.ttf" SelfReg="false" Sequence="206"/>
+    <ROW File="subosd.html" Component_="aalib.html" FileName="subosd~1.htm|subosd.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\subosd.html" SelfReg="false" Sequence="140"/>
+    <ROW File="svgalib.html" Component_="aalib.html" FileName="svgali~1.htm|svgalib.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\svgalib.html" SelfReg="false" Sequence="141"/>
+    <ROW File="synthetic.conf" Component_="autohint.conf" FileName="90-syn~1.con|90-synthetic.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\90-synthetic.conf" SelfReg="false" Sequence="183"/>
+    <ROW File="synthetic.conf_1" Component_="fix_globaladvance.conf" FileName="90-syn~1.con|90-synthetic.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\90-synthetic.conf" SelfReg="false" Sequence="198"/>
+    <ROW File="tdfx_vid.html" Component_="aalib.html" FileName="tdfx_v~1.htm|tdfx_vid.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\tdfx_vid.html" SelfReg="false" Sequence="143"/>
+    <ROW File="tdfxfb.html" Component_="aalib.html" FileName="tdfxfb~1.htm|tdfxfb.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\tdfxfb.html" SelfReg="false" Sequence="142"/>
+    <ROW File="tokr3260.dll" Component_="tokr3260.dll" FileName="tokr3260.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\tokr3260.dll" SelfReg="false" Sequence="43"/>
+    <ROW File="tv_input.html" Component_="aalib.html" FileName="tv-inp~1.htm|tv-input.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\tv-input.html" SelfReg="false" Sequence="144"/>
+    <ROW File="tv_teletext.html" Component_="aalib.html" FileName="tv-tel~1.htm|tv-teletext.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\tv-teletext.html" SelfReg="false" Sequence="145"/>
+    <ROW File="tvout.html" Component_="aalib.html" FileName="tvout~1.htm|tvout.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\tvout.html" SelfReg="false" Sequence="146"/>
+    <ROW File="tvqdec.dll" Component_="tvqdec.dll" FileName="tvqdec.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\tvqdec.dll" SelfReg="false" Sequence="44"/>
+    <ROW File="unhint_nonlatin.conf" Component_="autohint.conf" FileName="25-unh~1.con|25-unhint-nonlatin.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\25-unhint-nonlatin.conf" SelfReg="false" Sequence="167"/>
+    <ROW File="unhint_small_vera.conf" Component_="autohint.conf" FileName="20-unh~1.con|20-unhint-small-vera.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\20-unhint-small-vera.conf" SelfReg="false" Sequence="166"/>
+    <ROW File="unhint_small_vera.conf_1" Component_="fix_globaladvance.conf" FileName="20-unh~1.con|20-unhint-small-vera.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\20-unhint-small-vera.conf" SelfReg="false" Sequence="185"/>
+    <ROW File="unhinted.conf" Component_="autohint.conf" FileName="10-unh~1.con|10-unhinted.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\10-unhinted.conf" SelfReg="false" Sequence="164"/>
+    <ROW File="unifont.conf" Component_="autohint.conf" FileName="69-uni~1.con|69-unifont.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\69-unifont.conf" SelfReg="false" Sequence="179"/>
+    <ROW File="unifont.conf_1" Component_="fix_globaladvance.conf" FileName="69-uni~1.con|69-unifont.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\69-unifont.conf" SelfReg="false" Sequence="196"/>
+    <ROW File="unix.html" Component_="aalib.html" FileName="unix~1.htm|unix.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\unix.html" SelfReg="false" Sequence="147"/>
+    <ROW File="urw_aliases.conf" Component_="autohint.conf" FileName="30-urw~1.con|30-urw-aliases.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\30-urw-aliases.conf" SelfReg="false" Sequence="169"/>
+    <ROW File="urw_aliases.conf_1" Component_="fix_globaladvance.conf" FileName="30-urw~1.con|30-urw-aliases.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\30-urw-aliases.conf" SelfReg="false" Sequence="187"/>
+    <ROW File="usage.html" Component_="aalib.html" FileName="usage~1.htm|usage.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\usage.html" SelfReg="false" Sequence="148"/>
+    <ROW File="user.conf" Component_="autohint.conf" FileName="50-use~1.con|50-user.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\50-user.conf" SelfReg="false" Sequence="173"/>
+    <ROW File="user.conf_1" Component_="fix_globaladvance.conf" FileName="50-use~1.con|50-user.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.d\50-user.conf" SelfReg="false" Sequence="191"/>
+    <ROW File="vcd.html" Component_="aalib.html" FileName="vcd~1.htm|vcd.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\vcd.html" SelfReg="false" Sequence="149"/>
+    <ROW File="vdodec32.dll" Component_="vdodec32.dll" FileName="vdodec32.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vdodec32.dll" SelfReg="false" Sequence="45"/>
+    <ROW File="vdowave.drv" Component_="acelpdec.ax" FileName="vdowave.drv" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vdowave.drv" SelfReg="false" Sequence="46"/>
+    <ROW File="vesa.html" Component_="aalib.html" FileName="vesa~1.htm|vesa.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\vesa.html" SelfReg="false" Sequence="150"/>
+    <ROW File="vfw2menc.exe" Component_="vfw2menc.exe" FileName="vfw2menc.exe" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\vfw2menc.exe" SelfReg="false" Sequence="210"/>
+    <ROW File="video.html" Component_="aalib.html" FileName="video~1.htm|video.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\video.html" SelfReg="false" Sequence="151"/>
+    <ROW File="vidix.html" Component_="aalib.html" FileName="vidix~1.htm|vidix.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\vidix.html" SelfReg="false" Sequence="152"/>
+    <ROW File="vivog723.acm" Component_="acelpdec.ax" FileName="vivog723.acm" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vivog723.acm" SelfReg="false" Sequence="48"/>
+    <ROW File="vmnc.dll" Component_="vmnc.dll" FileName="vmnc.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vmnc.dll" SelfReg="false" Sequence="49"/>
+    <ROW File="voxmsdec.ax" Component_="acelpdec.ax" FileName="voxmsdec.ax" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\voxmsdec.ax" SelfReg="false" Sequence="50"/>
+    <ROW File="vp4vfw.dll" Component_="vp4vfw.dll" FileName="vp4vfw.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vp4vfw.dll" SelfReg="false" Sequence="51"/>
+    <ROW File="vp6vfw.dll" Component_="vp6vfw.dll" FileName="vp6vfw.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vp6vfw.dll" SelfReg="false" Sequence="52"/>
+    <ROW File="vp7vfw.dll" Component_="vp7vfw.dll" FileName="vp7vfw.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vp7vfw.dll" SelfReg="false" Sequence="53"/>
+    <ROW File="vssh264.dll" Component_="vssh264.dll" FileName="vssh264.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vssh264.dll" SelfReg="false" Sequence="54"/>
+    <ROW File="vssh264core.dll" Component_="vssh264core.dll" FileName="vssh26~1.dll|vssh264core.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vssh264core.dll" SelfReg="false" Sequence="55"/>
+    <ROW File="vssh264dec.dll" Component_="vssh264dec.dll" FileName="vssh26~2.dll|vssh264dec.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vssh264dec.dll" SelfReg="false" Sequence="56"/>
+    <ROW File="vsshdsd.dll" Component_="vsshdsd.dll" FileName="vsshdsd.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vsshdsd.dll" SelfReg="false" Sequence="57"/>
+    <ROW File="vsslight.dll" Component_="vsslight.dll" FileName="vsslight.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vsslight.dll" SelfReg="false" Sequence="58"/>
+    <ROW File="vsswlt.dll" Component_="vsswlt.dll" FileName="vsswlt.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\vsswlt.dll" SelfReg="false" Sequence="59"/>
+    <ROW File="windows.html" Component_="aalib.html" FileName="window~1.htm|windows.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\windows.html" SelfReg="false" Sequence="153"/>
+    <ROW File="wma9dmod.dll" Component_="wma9dmod.dll" FileName="wma9dmod.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\wma9dmod.dll" SelfReg="false" Sequence="60"/>
+    <ROW File="wmadmod.dll" Component_="wmadmod.dll" FileName="wmadmod.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\wmadmod.dll" SelfReg="false" Sequence="61"/>
+    <ROW File="wmsdmod.dll" Component_="wmsdmod.dll" FileName="wmsdmod.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\wmsdmod.dll" SelfReg="false" Sequence="62"/>
+    <ROW File="wmspdmod.dll" Component_="wmspdmod.dll" FileName="wmspdmod.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\wmspdmod.dll" SelfReg="false" Sequence="63"/>
+    <ROW File="wmv9dmod.dll" Component_="wmv9dmod.dll" FileName="wmv9dmod.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\wmv9dmod.dll" SelfReg="false" Sequence="64"/>
+    <ROW File="wmvadvd.dll" Component_="wmvadvd.dll" FileName="wmvadvd.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\wmvadvd.dll" SelfReg="false" Sequence="65"/>
+    <ROW File="wmvdmod.dll" Component_="wmvdmod.dll" FileName="wmvdmod.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\wmvdmod.dll" SelfReg="false" Sequence="66"/>
+    <ROW File="wnvwinx.dll" Component_="wnvwinx.dll" FileName="wnvwinx.dll" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\codecs\wnvwinx.dll" SelfReg="false" Sequence="67"/>
+    <ROW File="x11.html" Component_="aalib.html" FileName="x11~1.htm|x11.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\x11.html" SelfReg="false" Sequence="154"/>
+    <ROW File="xv.html" Component_="aalib.html" FileName="xv~1.htm|xv.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\xv.html" SelfReg="false" Sequence="155"/>
+    <ROW File="yes_bitmaps.conf" Component_="autohint.conf" FileName="70-yes~1.con|70-yes-bitmaps.conf" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\fonts\conf.avail\70-yes-bitmaps.conf" SelfReg="false" Sequence="181"/>
+    <ROW File="zr.html" Component_="aalib.html" FileName="zr~1.htm|zr.html" Attributes="0" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win\mplayer\docs\zr.html" SelfReg="false" Sequence="156"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" Languages="en;fr;de;ru;es;zh;zh_TW" LangOpt="1" InstallationType="2" CabsLocation="1" CompressCabs="false" UseLzma="true" LzmaCompressionLevel="3" PackageType="1" FilesInsideExe="true" ExeIconPath="D:\qt\BMPlayer-V1.0.1-win32\BMPlayer-V1.0.1-win\BMPlayer.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\install" LangsDialog="true" ExeName="BMPlayer"/>
+    <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_fr.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_de.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_ru.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_es.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_zh.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_zh_TW.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_FRAGS&gt;FolderDlg.aip"/>
+    <ROW Fragment="LicenseAgreementDlg.aip" Path="&lt;AI_FRAGS&gt;LicenseAgreementDlg.aip"/>
+    <ROW Fragment="ReadmeDlg.aip" Path="&lt;AI_FRAGS&gt;ReadmeDlg.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_FRAGS&gt;UI.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+    <ROW Name="style28_banner.jpg" SourcePath="&lt;AI_RES&gt;style28_banner.jpg"/>
+    <ROW Name="style28_dialog.jpg" SourcePath="&lt;AI_RES&gt;style28_dialog.jpg"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ROW Dialog_="FolderDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="Cancel" TextLocId="-" MsiKey="FolderDlg#Logo"/>
+    <ROW Dialog_="BrowseDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="OK" TextLocId="-" MsiKey="BrowseDlg#Logo"/>
+    <ROW Dialog_="CustomizeDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="Back" TextLocId="-" MsiKey="CustomizeDlg#Logo"/>
+    <ROW Dialog_="DiskCostDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="VolumeList" TextLocId="-" MsiKey="DiskCostDlg#Logo"/>
+    <ROW Dialog_="FilesInUse" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="Title" TextLocId="-" MsiKey="FilesInUse#Logo"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="Description" TextLocId="-" MsiKey="MaintenanceTypeDlg#Logo"/>
+    <ROW Dialog_="OutOfDiskDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="VolumeList" TextLocId="-" MsiKey="OutOfDiskDlg#Logo"/>
+    <ROW Dialog_="OutOfRbDiskDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="Text2" TextLocId="-" MsiKey="OutOfRbDiskDlg#Logo"/>
+    <ROW Dialog_="ProgressDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="Back" TextLocId="-" MsiKey="ProgressDlg#Logo"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="Back" TextLocId="-" MsiKey="VerifyReadyDlg#Logo"/>
+    <ROW Dialog_="MsiRMFilesInUse" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="OK" TextLocId="-" MsiKey="MsiRMFilesInUse#Logo"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" Attributes="1048577" Text="[BannerBitmap]" Control_Next="AgreementText" MsiKey="LicenseAgreementDlg#BannerBitmap"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="Back" TextLocId="-" MsiKey="LicenseAgreementDlg#Logo"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control="AgreementText" Type="FileScrollableText" X="20" Y="60" Width="330" Height="120" Attributes="7" Text="GNU GENERAL PUBLIC LICENSE.rtf" Control_Next="Buttons" TextLocId="-"/>
+    <ROW Dialog_="ReadmeDlg" Control="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" Attributes="1048577" Text="[BannerBitmap]" Control_Next="ReadmeText" MsiKey="ReadmeDlg#BannerBitmap"/>
+    <ROW Dialog_="ReadmeDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="Back" TextLocId="-" MsiKey="ReadmeDlg#Logo"/>
+    <ROW Dialog_="ReadmeDlg" Control="ReadmeText" Type="FileScrollableText" X="20" Y="60" Width="330" Height="150" Attributes="7" Text="C:\Documents and Settings\Administrator\My Documents\Readme.rtf" Control_Next="BottomLine" TextLocId="-"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="Title" TextLocId="-" MsiKey="VerifyRemoveDlg#Logo"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="Logo" Type="Text" X="4" Y="228" Width="70" Height="12" Attributes="1" Text="      BMY-Soft" Control_Next="Back" TextLocId="-" MsiKey="VerifyRepairDlg#Logo"/>
+    <ATTRIBUTE name="FixedSizeBitmaps" value="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="ReadmeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="3"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="2"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="3"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="NewDialog" Argument="ReadmeDlg" Condition="AI_INSTALL AND IAgree = &quot;Yes&quot;" Ordering="1"/>
+    <ROW Dialog_="ReadmeDlg" Control_="Back" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="ReadmeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#BMplayer.exe]"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_ViewReadme" Type="1" Source="aicustact.dll" Target="[#ChangeLog.txt]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder][ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiExtComponent">
+    <ROW Extension="asf" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="avi" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="wma" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="wmv" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="3gp" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="ac3" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="ape" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="cde" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="vcd" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="vob" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="mpg" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="mpeg" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="divx" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="dv" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="mp1" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="mp2" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="mp3" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="mp4" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="flac" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="flv" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="mov" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="ogg" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="ogm" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="ogv" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="ra" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="ram" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="rec" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="rm" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="rmvb" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="wav" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="mid" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="mpv" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="mqv" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+    <ROW Extension="nsv" Component_="BMplayer.exe" ProgId_="[|Manufacturer].[|ProductName]" Feature_="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="controlPanelIcon.exe" SourcePath="D:\qt\BMPlayer-V1.0.1-win32\BMPlayer-V1.0.1-win\BMPlayer.ico" Index="0"/>
+    <ROW Name="ext_1.exe" SourcePath="D:\qt\BMPlayer-V1.0.1-win32\BMPlayer-V1.0.1-win\BMplayer.exe" Index="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="740"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="Not Installed" Sequence="1545"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1300"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="740"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="Version9X OR (VersionNT AND (NOT VersionNT64)) OR (VersionNT64 &gt;= 600)" Description="[ProductName] cannot be installed on systems earlier than [WindowsTypeNT64]" DescriptionLocId="AI.LaunchCondition.NoSpecificNT64" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiProgIdComponent">
+    <ROW ProgId="[|Manufacturer].[|ProductName]" Icon_="ext_1.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="BMplayer.exe" Directory_="SHORTCUTDIR" Name="BMplayer.exe" Component_="BMplayer.exe" Target="[#BMplayer.exe]" Description="BMplayer.exe" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="BMplayer.exe_1" Directory_="DesktopFolder" Name="BMplayer.exe" Component_="BMplayer.exe" Target="[#BMplayer.exe]" Description="BMplayer.exe" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiVerbComponent">
+    <ROW Extension_="3gp" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="ac3" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="ape" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="asf" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="avi" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="cde" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="divx" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="dv" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="flac" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="flv" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="mid" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="mov" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="mp1" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="mp2" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="mp3" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="mp4" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="mpeg" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="mpg" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="mpv" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="mqv" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="nsv" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="ogg" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="ogm" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="ogv" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="ra" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="ram" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="rec" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="rm" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="rmvb" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="vcd" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="vob" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="wav" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="wma" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+    <ROW Extension_="wmv" Component_="BMplayer.exe" Verb="open" Sequence="0" Command="&amp;Open with BMPlayer" Argument="&quot;%1&quot;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
+    <ROW Directory_="APPDIR" SourcePath="D:\qt\BMPlayer-V1.0.1-Win32\BMPlayer-V1.0.1-win" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6"/>
+  </COMPONENT>
+</DOCUMENT>

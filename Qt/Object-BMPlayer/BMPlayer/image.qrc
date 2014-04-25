@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>image/about.png</file>
+        <file>image/exit.png</file>
+        <file>image/open.png</file>
+        <file>image/play_pause.png</file>
+        <file>image/fullscreen.png</file>
+        <file>image/BMPlayer.png</file>
+        <file>image/BMPlayer 512x512.png</file>
+        <file>image/pause.png</file>
+        <file>image/play.png</file>
+        <file>image/stop.png</file>
+        <file>image/BMY-Soft 200x200.png</file>
+        <file>image/BMPlayer 200×145.png</file>
+        <file>image/mute.png</file>
+        <file>image/volume.png</file>
+    </qresource>
+</RCC>

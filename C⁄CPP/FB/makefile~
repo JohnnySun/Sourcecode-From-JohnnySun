@@ -1,0 +1,17 @@
+TGT = fb.out
+SRC = example.c
+LIC = framebuffer.c keyboard.c
+LIB = libframebuffer.so libkeyboard.so
+LID = /lib
+CIB = $(LID)/libframebuffer.so $(LID)/libkeyboard.so
+GIB = -l framebuffer -l keyboard
+
+all: $(LIB)
+	$(CC) $(SRC) -L . $(GIB) -o $(TGT)
+
+$(LIB): $(LIC)
+	$(CC) $(LIC) -fPIC -shared -o $@
+	cp $@ $(LID)
+
+clean:
+	rm $(TGT) $(CIB) $(LIB)

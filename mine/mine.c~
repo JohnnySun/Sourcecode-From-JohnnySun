@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+enum my_gender{man, woman, other};
+
+struct person{
+		unsigned int age;
+		unsigned int gender;
+		char university[30];
+		char research[100];
+};
+
+int main(int argc, char *argv[])
+{
+		struct person *JohnnySun = malloc(sizeof(struct person));
+		JohnnySun->age = 19;
+		JohnnySun->gender = man;
+		strcpy(JohnnySun->university, "TJUT");
+		strcpy(JohnnySun->research,"Linux, Kernel, C/Cpp, Python,  Qt,  BASH");
+		printf("%s\n", JohnnySun->research);
+		return 0;
+}
